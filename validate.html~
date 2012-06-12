@@ -99,6 +99,55 @@ body
 
 </style>
 
+<script type="text/javascript" >
+
+		/*"address": "webonise",
+        "age": 23,
+        "created_at": "2012-06-12T08:54:12Z",
+        "description": "hahahaaaaa",
+        "email": "aditya@yopmail.com",
+        "gender": "m",
+        "id": 1,
+        "name": "Aditya",
+        "pincode": 411048,
+        "updated_at": "2012-06-12T08:54:12Z"*/
+
+function get_data()
+{
+	
+	var data1={
+				"utf8":"✓", 
+				"authenticity_token":"TWq5wTGiDBnUuWj3t6Qte9EhTJOWpHViSJYZTLVtsL4=", 
+				"user":{
+							"name":$('#name').val().toString(), 
+							"email":$('#email').val().toString(), 
+							"age":$('#age').val().toString(), 
+							"gender":$('input[name=gender]:checked').val().toString(),
+							"address":$('#add').val().toString(), 
+							"description":$('#desc').val().toString(), 
+							"pincode":$('#pin').val().toString()
+							}, 
+							"commit":"Create User"
+				};
+				
+				$.ajax({
+        type: "POST",
+        url: "http://blooming-beach-2334.herokuapp.com/users",
+        data: data1,
+        dataType: "json",
+        success: alert("success"),
+        //error: OnGetMemberError
+    });
+    
+   alert(data1.toString());
+   
+}
+
+
+
+
+</script>
+
 </head>
 <body>
 <dir id="head">Sign Up Form</dir>
@@ -108,16 +157,16 @@ body
 
 <tr>
 		<td>Name:</td>
-		<td><input value="" class="validate[required] text-input" type="text" name="req" id="req" /></td>
+		<td><input value="" class="validate[required] text-input" type="text" name="req" id="name" /></td>
 </tr>
 <tr>
 		<td>Gender:</td>
-		<td><input class="validate[required] radio" type="radio" name="gender" id="radio1" value="5"/><span>Male</span>
-			<input class="validate[required] radio" type="radio" name="gender" id="radio2" value="3"/><span>Female</span></td>
+		<td><input class="validate[required] radio" type="radio" name="gender" id="radio1" value="m"/><span>Male</span>
+			<input class="validate[required] radio" type="radio" name="gender" id="radio2" value="f"/><span>Female</span></td>
 </tr>
 <tr>
 		<td style="vertical-align: text-top;">Address:</td>
-		<td><textarea style="width:77%;height:100px" class="validate[required] text-input" type="text" name="req" id="req"></textarea></td>
+		<td><textarea style="width:77%;height:100px" class="validate[required] text-input" type="text" name="add" id="add"></textarea></td>
 </tr>
 <tr>
 		<td>Age:</td>
@@ -135,10 +184,8 @@ body
 		<td><textarea style="width:77%;height:80px" class="validate[required] text-input" type="text" name="desc" id="desc"></textarea></td>
 </tr>
 
-
-<input class="submit button" type="submit" value="Sign Up"/>
 </table>
-<input class="submit button" type="submit" value="Sign Up"/>
+<input class="button" type="submit" value="Sign Up" onclick="get_data();"/>
 </form>
 
 </div>
