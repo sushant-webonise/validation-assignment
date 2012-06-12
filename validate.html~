@@ -80,6 +80,7 @@ body
 }
 .button
 {
+	background-color: white;
 	padding: 5px 5px 5px 5px;
 	border-style: solid;
 	border-width: 1px;
@@ -128,7 +129,8 @@ body
 </tr>
 <tr>
 		<td>Email-id:</td>
-		<td><input value="" class="validate[custom[email]] text-input" type="text" name="paypal" id="paypal" /></td>
+		<td><input value="" class="validate[custom[email]] text-input" type="text" name="paypal" id="paypal" />
+</td>
 <tr>
 		<td>Password:</td>
 		<td><input value="" class="validate[required] text-input" type="password" name="password" id="password" /></td>
