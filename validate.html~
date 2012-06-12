@@ -26,7 +26,7 @@
 
 body
 {
-	background-image: url('../images/bg_dotted.png');
+	background-image: url('images/bg_dotted.png');
 	
 }
 
@@ -117,31 +117,28 @@ body
 </tr>
 <tr>
 		<td style="vertical-align: text-top;">Address:</td>
-		<td><textarea style="width:90%;height:100px" class="validate[required] text-input" type="text" name="req" id="req"></textarea></td>
+		<td><textarea style="width:77%;height:100px" class="validate[required] text-input" type="text" name="req" id="req"></textarea></td>
 </tr>
 <tr>
-		<td>Contact No:</td>
-		<td><input value="" class="validate[required,custom[integer]] text-input" type="text" name="max" id="max" /></td>
+		<td>Age:</td>
+		<td><input value="" class="validate[required,custom[integer]] text-input" type="text" name="age" id="age" /></td>
 </tr>
 <tr>
-		<td>Birth date</td>
-		<td><input value="" class="validate[custom[date] text-input" type="text" name="past" id="past" /></td>
+		<td>Pincode:</td>
+		<td><input value="" class="validate[required,custom[integer]] text-input" type="text" name="pin" id="pin" /></td>
 </tr>
 <tr>
 		<td>Email-id:</td>
-		<td><input value="" class="validate[custom[email]] text-input" type="text" name="paypal" id="paypal" />
-</td>
+		<td><input value="" class="validate[custom[email]] text-input" type="text" name="email" id="email" /></td>
 <tr>
-		<td>Password:</td>
-		<td><input value="" class="validate[required] text-input" type="password" name="password" id="password" /></td>
+		<td style="vertical-align: text-top;">Description:</td>
+		<td><textarea style="width:77%;height:80px" class="validate[required] text-input" type="text" name="desc" id="desc"></textarea></td>
 </tr>
-<tr>
-		<td>Confirm Password:</td>
-		<td><input value="" class="validate[required,equals[password]] text-input" type="password" name="password2" id="password2" /></td>
-</tr>
-</tr>
+
+
 <input class="submit button" type="submit" value="Sign Up"/>
 </table>
+<input class="submit button" type="submit" value="Sign Up"/>
 </form>
 
 </div>
