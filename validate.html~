@@ -26,7 +26,7 @@
 
 body
 {
-	background-image: url('bg_dotted.png');
+	background-image: url('../images/bg_dotted.png');
 	
 }
 
